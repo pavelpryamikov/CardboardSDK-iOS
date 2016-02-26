@@ -6,6 +6,8 @@
 #import <Foundation/Foundation.h>
 #import <GLKit/GLKit.h>
 
+#import "CBDProfile.h"
+
 
 typedef NS_ENUM(NSInteger, CBDEyeType)
 {
@@ -55,6 +57,7 @@ typedef NS_ENUM(NSInteger, CBDEyeType)
 @property (nonatomic) BOOL neckModelEnabled;
 @property (nonatomic) BOOL useTouchTrigger;
 
+- (void)updateWithProfile:(CBDProfile *)profile;
 - (void)getFrameParameters:(float *)frameParemeters zNear:(float)zNear zFar:(float)zFar;
 
 @end

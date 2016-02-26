@@ -39,6 +39,7 @@
 		BC9FA0941A92759C0054276F /* CBDViewController.mm in Sources */ = {isa = PBXBuildFile; fileRef = BC9FA07D1A92759C0054276F /* CBDViewController.mm */; };
 		BC9FA0951A92759C0054276F /* GLHelpers.m in Sources */ = {isa = PBXBuildFile; fileRef = BC9FA0811A92759C0054276F /* GLHelpers.m */; };
 		BC9FA0971A9276AC0054276F /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = BC6733381A5D90C700C6D79B /* main.m */; };
+		E97499771C8096D000FAC8AC /* CBDProfile.mm in Sources */ = {isa = PBXBuildFile; fileRef = E97499761C8096D000FAC8AC /* CBDProfile.mm */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -102,6 +103,8 @@
 		BC9FA0801A92759C0054276F /* GLHelpers.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = GLHelpers.h; sourceTree = "<group>"; };
 		BC9FA0811A92759C0054276F /* GLHelpers.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = GLHelpers.m; sourceTree = "<group>"; };
 		BCCBC5821A5D93170093F31A /* LaunchScreen.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = LaunchScreen.xib; sourceTree = "<group>"; };
+		E97499751C8096D000FAC8AC /* CBDProfile.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CBDProfile.h; sourceTree = "<group>"; };
+		E97499761C8096D000FAC8AC /* CBDProfile.mm */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.objcpp; path = CBDProfile.mm; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -190,6 +193,8 @@
 				BC9FA07B1A92759C0054276F /* CBDStereoGLView.m */,
 				BC9FA07C1A92759C0054276F /* CBDViewController.h */,
 				BC9FA07D1A92759C0054276F /* CBDViewController.mm */,
+				E97499751C8096D000FAC8AC /* CBDProfile.h */,
+				E97499761C8096D000FAC8AC /* CBDProfile.mm */,
 				BC9FA07E1A92759C0054276F /* Misc */,
 			);
 			name = CardboardSDK;
@@ -358,6 +363,7 @@
 				BC9FA0511A9275660054276F /* TextOverlayView.m in Sources */,
 				BC9FA0521A9275660054276F /* TreasureViewController.m in Sources */,
 				BC9FA0851A92759C0054276F /* DistortionRenderer.mm in Sources */,
+				E97499771C8096D000FAC8AC /* CBDProfile.mm in Sources */,
 				BC9FA0911A92759C0054276F /* MagnetSensor.mm in Sources */,
 				BC9FA08C1A92759C0054276F /* HeadTracker.mm in Sources */,
 				BC9FA0841A92759C0054276F /* Distortion.mm in Sources */,

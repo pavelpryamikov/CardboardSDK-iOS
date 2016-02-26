@@ -561,6 +561,26 @@
     [self.stereoRendererDelegate finishFrameWithViewportRect:viewport->toCGRect()];
 }
 
+- (void)updateWithProfile:(CBDProfile *)profile {
+    CardboardSDK::CardboardDeviceParams *cardboard = _headMountedDisplay->getCardboard();
+    
+    cardboard->setVendor(profile.vendor);
+    cardboard->setModel(profile.model);
+    cardboard->setScreenToLensDistance(profile.screenToLensDistance);
+    cardboard->setInterLensDistance(profile.interLensDistance);
+    cardboard->setVerticalDistanceToLensCenter(profile.trayToLensDistance);
+    
+    float distortionCoefficients[2] = { profile.distortionCoefficient1, profile.distortionCoefficient2 };
+    cardboard->distortion()->setCoefficients(distortionCoefficients);
+    
+    cardboard->maximumLeftEyeFOV()->setLeft(profile.fovOuterAngle);
+    cardboard->maximumLeftEyeFOV()->setRight(profile.fovInnerAngle);
+    cardboard->maximumLeftEyeFOV()->setTop(profile.fovTopAngle);
+    cardboard->maximumLeftEyeFOV()->setBottom(profile.fovBottomAngle);
+    
+    _projectionChanged = YES;
+}
+
 - (void)getFrameParameters:(float *)frameParemeters zNear:(float)zNear zFar:(float)zFar
 {
     [self calculateFrameParametersWithHeadTransform:_headTransform

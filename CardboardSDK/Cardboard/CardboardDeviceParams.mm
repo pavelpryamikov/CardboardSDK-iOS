@@ -42,25 +42,50 @@ CardboardDeviceParams::~CardboardDeviceParams()
     if (_distortion != nullptr) { delete _distortion; }
     if (_maximumLeftEyeFOV != nullptr) { delete _maximumLeftEyeFOV; }
 }
+    
+void CardboardDeviceParams::setVendor(NSString *vendor)
+{
+    _vendor = vendor;
+}
 
 NSString *CardboardDeviceParams::vendor()
 {
     return _vendor;
+}
+    
+void CardboardDeviceParams::setModel(NSString *model)
+{
+    _model = model;
 }
 
 NSString *CardboardDeviceParams::model()
 {
     return _model;
 }
+    
+void CardboardDeviceParams::setInterLensDistance(float interLensDistance)
+{
+    _interLensDistance = interLensDistance;
+}
 
 float CardboardDeviceParams::interLensDistance()
 {
     return _interLensDistance;
 }
+    
+void CardboardDeviceParams::setVerticalDistanceToLensCenter(float verticalDistanceToLensCenter)
+{
+    _verticalDistanceToLensCenter = verticalDistanceToLensCenter;
+}
 
 float CardboardDeviceParams::verticalDistanceToLensCenter()
 {
     return _verticalDistanceToLensCenter;
+}
+    
+void CardboardDeviceParams::setScreenToLensDistance(float screenToLensDistance)
+{
+    _screenToLensDistance = screenToLensDistance;
 }
 
 float CardboardDeviceParams::screenToLensDistance()

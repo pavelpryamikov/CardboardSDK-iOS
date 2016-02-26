@@ -24,13 +24,19 @@ class CardboardDeviceParams
     CardboardDeviceParams(CardboardDeviceParams* params);
     ~CardboardDeviceParams();
     
+    void setVendor(NSString *vendor);
     NSString *vendor();
+    
+    void setModel(NSString *model);
     NSString *model();
     
+    void setInterLensDistance(float interLensDistance);
     float interLensDistance();
     
+    void setVerticalDistanceToLensCenter(float verticalDistanceToLensCenter);
     float verticalDistanceToLensCenter();
   
+    void setScreenToLensDistance(float screenToLensDistance);
     float screenToLensDistance();
     
     FieldOfView *maximumLeftEyeFOV();
