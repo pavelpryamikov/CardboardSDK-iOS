@@ -233,6 +233,19 @@
     if (_distortionRenderer != nullptr) { delete _distortionRenderer; }
 }
 
+- (void)setVrModeEnabled:(BOOL)vrModeEnabled {
+    _vrModeEnabled = vrModeEnabled;
+    
+    _projectionChanged = YES;
+    [self updateRenderViewSize:self.view.bounds.size];
+}
+
+- (void)setDistortionCorrectionEnabled:(BOOL)distortionCorrectionEnabled {
+    _distortionCorrectionEnabled = distortionCorrectionEnabled;
+    
+    _projectionChanged = YES;
+}
+
 - (BOOL)vignetteEnabled
 {
     return _distortionRenderer->vignetteEnabled();
